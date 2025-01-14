@@ -1,0 +1,74 @@
+1)WRITE JAVA PROGRAM TO PRINT "HELLO WORLD" MESSAGE?
+
+package com.demo;
+
+public class Java_Artchitecture {
+
+	public static void main(String[] args) {
+		
+		System.out.println("HELLO WORLD");				//prienting HELLO WORLD message here.
+		
+	}
+
+}
+
+output:
+HELLO WORLD
+
+
+
+2)WRITE AJAVA PROGRAM TO DEMO ABOUT ALL JAVA PRIMITIVE DATATYPES?
+package com.demo;
+
+public class Java_Artchitecture {
+
+	public static void main(String[] args) {
+	
+		//Primitive Data Type
+				
+		//byte data type
+		byte b=8;
+		System.out.println(b);
+		
+		//short data type
+		short n=240;
+		System.out.println(n);
+		
+		//character data type
+		char ch = 'a';
+		System.out.println(ch);
+		
+		//boolean data type
+		boolean  var = false;
+		System.out.println(var);
+		
+		//int data type
+		int number = 25;
+		System.out.println(number);
+		
+		//float data type
+		float price = 30.12f;
+		System.out.println(price);
+		
+		//long data type
+		long l=1234566l;
+		System.out.println(l);
+		
+		//double data type
+		double d=124251.6372773d;
+		System.out.println(d);
+		
+	}
+
+}
+
+
+output:
+8
+240
+a
+false
+25
+30.12
+1234566
+124251.6372773
