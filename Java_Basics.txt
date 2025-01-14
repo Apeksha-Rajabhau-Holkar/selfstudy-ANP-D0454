@@ -1,0 +1,154 @@
+1. WAP for creating a mini calculator for performing a particular operation based on user choice. ex. if the user will select the addition operation then the output should be the addition of the given two nos.
+
+package com.demo;
+
+import java.util.*;
+
+public class Lab2 {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter First Number :");		//Enter first no. from user
+		int a = sc.nextInt();
+		
+		System.out.println("Enter Second Number :");		//Enter second no from user
+		int b = sc.nextInt();
+		
+		System.out.println("Enter Operator Number :");		//Enter operator from user
+		char Operator = sc.next().charAt(0);
+		
+		switch(Operator) {
+		//Perform Addition Operation or calculation addition of two numbers
+		case '+': System.out.println("Addition :"+(a + b));
+				  break;
+				 
+	    // Calculating Subtraction
+		case '-': System.out.println("Substraction :"+(a - b));
+		  		  break;
+		  
+		//Calculating Product
+		case '*': System.out.println("Multiplication :"+a * b);
+		          break;
+		  
+	    // Calculating Division of two numbers
+		case '/': System.out.println("Division :"+(a / b));
+				  break;
+		  
+		//Calculate Reminder
+		case '%': System.out.println("Reminder :"+(a % b));
+		  		  break;
+		  	
+		//perform default operation if all above case is not matched
+		default: System.out.println("Wrong Operator");
+		  
+		}
+		
+		
+	}
+
+}
+
+output:
+Enter First Number :
+26
+Enter Second Number :
+25
+Enter Operator Number :
++
+Addition :51
+
+
+2. WAP for creating a banking Application .you have to take input from the user whether the user wants to deposit, withdraw, or find a current balance.
+
+	package com.demo;
+	import java.io.*;
+
+	public class Bank {
+
+	public static void main(String[] args)  throws IOException {
+		        double balance = 0.0;
+		        
+		        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		        while (true) {
+		            System.out.println("\nBanking Application");  //printing Banking application 
+		            System.out.println("1. Deposit");
+		            System.out.println("2. Withdraw");
+		            System.out.println("3. Check Balance");
+		            System.out.println("4. Exit");
+		            
+		            //give input from user whether they want deposit,withdraw,balance check.
+		            System.out.print("Enter your choice: ");
+		            int choice = Integer.parseInt(br.readLine());
+
+		            switch (choice) {
+		                case 1: System.out.print("Enter amount to deposit: ");
+		                        double depositAmount = Double.parseDouble(br.readLine());
+		                        balance += depositAmount;
+		                        System.out.println("Deposit successful. New balance: " + balance);
+		                        break;
+		                        
+		                case 2: System.out.print("Enter amount to withdraw: ");
+		                        double withdrawAmount = Double.parseDouble(br.readLine());
+		                        if (withdrawAmount > balance) {
+		                        System.out.println("Insufficient balance.");
+		                        } else {
+		                        balance -= withdrawAmount;
+		                        System.out.println("Withdrawal successful. New balance: " + balance);
+		                        }
+		                        break;
+		                        
+		                case 3: System.out.println("Current balance: " + balance);
+		                        break;
+		                        
+		                case 4: System.out.println("Exiting application. Goodbye!");
+		                		System.exit(0);
+		                		break;
+		                		
+		                default: System.out.println("Invalid choice. Please try again.");
+		            }
+		        }
+		    }
+		}
+
+
+output:
+
+
+Banking Application
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 1
+Enter amount to deposit: 100
+Deposit successful. New balance: 100.0
+
+Banking Application
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 2
+Enter amount to withdraw: 50
+Withdrawal successful. New balance: 50.0
+
+Banking Application
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 3
+Current balance: 50.0
+
+Banking Application
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 4
+Exiting application. Goodbye!
+
+	
