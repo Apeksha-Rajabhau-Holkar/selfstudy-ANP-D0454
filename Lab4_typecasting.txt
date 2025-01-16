@@ -1,0 +1,69 @@
+1. Write a program to demonstrate  use of  type casting in java. print result after type casting.
+package com.demo;
+import java.util.*;
+
+public class Lab4_typecasting {
+
+	public static void main(String[] args) {
+		//1. Write a program to demonstrate  use of  type casting in java. print result after type casting.
+		 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter price of first product :");         //take first product as a input
+		float product1 = sc.nextFloat();		
+		System.out.println("Enter price of second product :");		  //take second product as a input
+		float product2 = sc.nextFloat();
+		System.out.println("Enter price of third product :");		  //take third product as a input
+		float product3 = sc.nextFloat();
+		
+		int total =(int) (product1+product2+product3);				//perform type casting float to int data type
+	
+		System.out.println(" Your total price of product is :"+total); //print total 
+		
+		
+		byte b=5;
+		byte a= (byte)(b*2);    //perform type casting here (b*2) refer as a int but we perform typecast so it converts to byte.
+		System.out.println(a);
+		
+		
+		 // Implicit Type Casting (Automatic)
+        byte a1 = 10;
+        short a2 = a1;
+        System.out.println("Implicit Type Casting: byte to short = " + a2);
+        
+        
+        // Explicit Type Casting 
+        double d = 99.99;
+        int d1= (int) d;
+        System.out.println("Explicit Type Casting: double to int = " + d1);
+        
+        
+        // Explicit Type Casting (Manual)
+        long l = 1000000000L;
+        byte l1 = (byte) l;
+        System.out.println("Explicit Type Casting: long to byte = " +l1);
+        
+        
+        // Explicit Type Casting (Manual)
+        char ch = 'A';
+        int ch1 = (int) ch;
+        System.out.println("Explicit Type Casting: char to int = " + ch1);
+
+	}
+
+}
+
+
+output:
+Enter price of first product :
+56
+Enter price of second product :
+89
+Enter price of third product :
+75
+ Your total price of product is :220
+10
+Implicit Type Casting: byte to short = 10
+Explicit Type Casting: double to int = 99
+Explicit Type Casting: long to byte = 0
+Explicit Type Casting: char to int = 65
+
