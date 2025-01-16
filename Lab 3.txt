@@ -1,0 +1,218 @@
+ 1. Write a program to demonstrate all primitive datatypes in Java.
+package com.demo;
+import java.util.*;
+public class PrimitiveDataTypes {
+
+	public static void main(String[] args) {
+		//Primitive Data Type
+		
+			byte a=10;
+			byte b=20;
+				
+			//performing operation on byte datatype using Arithmetic Operators.
+			System.out.println("byte sum: "+(a+b));
+			System.out.println("byte substraction: "+(a-b));
+			System.out.println("byte multiplication: "+(a*b));
+			System.out.println("byte division: "+(a/b));
+			System.out.println("byte reminder: "+(a%b));
+				
+				
+				
+			//performing operation on short datatype using Assignment Operators and shorthand operator.
+			byte a1=100;
+			System.out.println("a1 is :"+a1);
+			a1 += 2;
+			System.out.println("add 2 in a1 :"+a1);
+			a1 -=5;
+			System.out.println("substract 5 from a1 :"+a1);
+			a1 *=5;
+			System.out.println("multiply a1 with 5 :"+a1);
+			a1 /=5;				System.out.println("a1 divide by 5 :"+a1);
+			a1 %=5;
+			System.out.println("reminder :"+a1);
+			
+							
+			//perform operation using using character data type Comparison operators (==, !=, <, >, <=, >=)
+			char ch = 'a';
+			char ch1 = 'a';
+			System.out.println(ch == ch1);
+				
+				
+				
+			//perform operation using using boolean data type using Comparison operators ( !=, <, >, <=, >=)
+			System.out.println((3!=2));
+			System.out.println((3>2));
+			System.out.println((3<2));
+			System.out.println((3<=2));
+			System.out.println((3>=3));
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter first no. :");
+			int a2=sc.nextInt();
+			System.out.println("Enter second no. :");
+			int a3=sc.nextInt();
+			System.out.println("Enter operator :");
+			char operator= sc.next().charAt(0);
+			switch(operator) {
+			case '<' : System.out.println(a2<a3);
+					break;
+							
+			case '>' : System.out.println(a2>a3);
+		        		break;
+			default: System.out.println("Enter < or > operator");			
+							
+			}
+				
+				
+				
+				
+			//perform operation using using int data type using  Logical operators (&&, ||, !)
+			System.out.println("perform operation using using int data type using  Logical operators (&&, ||, !)");
+			int q1= 12;
+			int q2= 14;
+			System.out.println(!(q2 > q1));
+			if((q1 >0 )&& (q1 != 0)) {
+				System.out.println(" q1 is positive");
+			}
+			if((q1 < q2 )|| (q1 != q2)) {
+				int sum = q1 + q2;
+				System.out.println("sum of q1 and q2 is:"+sum);
+			}
+			else {
+				int product = q1 * q2;
+				System.out.println("product of q1 and q2 is:"+product);
+			} 
+				
+				
+				
+			//perform operation using float data type
+			System.out.println("perform operation using float data type :");
+			float p = 12.56f;
+			float p1 = 4.1f;
+			float prod=p*p1;
+			System.out.println("product :"+prod);
+				
+				
+		
+			//long data type
+			System.out.println("Ex of long data type :");
+			long l=1234566l;
+			System.out.println(l);
+				
+				
+			
+			//double data type
+			System.out.println("ex. of double data type :");
+			double d=124251.6372773d;
+			System.out.println(d);
+				
+
+	}
+
+}
+output:
+byte sum: 30
+byte substraction: -10
+byte multiplication: 200
+byte division: 0
+byte reminder: 10
+a1 is :100
+add 2 in a1 :102
+substract 5 from a1 :97
+multiply a1 with 5 :-27
+a1 divide by 5 :-5
+reminder :0
+true
+true
+true
+false
+false
+true
+Enter first no. :
+50
+Enter second no. :
+25
+Enter operator :
+>
+true
+perform operation using using int data type using  Logical operators (&&, ||, !)
+false
+ q1 is positive
+sum of q1 and q2 is:26
+perform operation using float data type :
+product :51.496002
+Ex of long data type :
+1234566
+ex. of double data type :
+124251.6372773
+
+
+
+
+2. Write a program to input student marks of multiple subject..print total of marks , result depending on percentage
+
+package com.demo;
+import java.util.*;
+
+public class Lab3 {
+	
+
+	public static void main(String[] args) {		 
+		
+		 Scanner marks = new Scanner(System.in);
+		 System.out.println("Enter your marks :");
+		 System.out.println("Enter BCT Subject Marks out of 100 :");
+		 float Math = marks.nextFloat();
+		 System.out.println("Enter FSD Subject Marks out of 100 :");
+		 float FSD = marks.nextFloat();
+		 System.out.println("Enter ACV Subject Marks out of 100 :");
+		 float ACV = marks.nextFloat();
+		 System.out.println("Enter DE Subject Marks out of 100 :");
+		 float DE = marks.nextFloat();
+		 System.out.println("Enter NLP Subject Marks out of 100 :");
+		 float NLP = marks.nextFloat();
+		 
+		 float total_marks = (Math+FSD+ACV+DE+NLP);
+		 System.out.println("total marks is :"+total_marks);
+		 
+		 float percentage=(float)((total_marks*100)/500);
+		 
+		 System.out.println("Your percentage is :"+ percentage+"%");
+		
+		 if (percentage >= 90) {
+		 System.out.println("Result: Distinction");
+		 } 
+		 else if (percentage >= 75)
+		 {
+			 System.out.println("Result: First Class");
+		 } else if (percentage >= 60) 
+		 {
+		     System.out.println("Result: Second Class");
+		 } else if (percentage >= 40) 
+		 {
+			 System.out.println("Result: Pass");
+		 } else {
+		            System.out.println("Result: Fail");
+		 }
+		 
+
+		 
+	}
+
+}
+
+
+output:
+Enter your marks :
+Enter BCT Subject Marks out of 100 :
+89
+Enter FSD Subject Marks out of 100 :
+96
+Enter ACV Subject Marks out of 100 :
+59
+Enter DE Subject Marks out of 100 :
+86
+Enter NLP Subject Marks out of 100 :
+92.5
+total marks is :422.5
+Your percentage is :84.5%
+Result: First Class
